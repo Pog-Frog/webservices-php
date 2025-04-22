@@ -12,7 +12,7 @@ class CityRepository {
     }
 
     private function load_cities() {
-        $temp = json_decode(file_get_contents(__DIR__ . '/../../egypt.cities.json'), true);
+        $temp = json_decode(file_get_contents(DATA_FILE_URL), true);
 
         if ($temp === null) {
             return null;
